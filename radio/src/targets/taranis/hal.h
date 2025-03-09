@@ -2582,14 +2582,14 @@
   #define LCD_SPI                       SPI3
   #define LCD_GPIO_AF                   GPIO_AF6
 #elif defined(PCBX9DP) || defined(PCBX7)
-  #define LCD_MOSI_GPIO                 GPIO_PIN(GPIOB, 15) // PC.12
-  #define LCD_CLK_GPIO                  GPIO_PIN(GPIOB, 13) // PC.10
-  #define LCD_A0_GPIO                   GPIO_PIN(GPIOB, 14) // PC.11
-  #define LCD_NCS_GPIO                  GPIO_PIN(GPIOB, 12) // PA.15
+  #define LCD_MOSI_GPIO                 GPIO_PIN(GPIOC, 3) // PC.12
+  #define LCD_CLK_GPIO                  GPIO_PIN(GPIOB, 10) // PC.10
+  #define LCD_A0_GPIO                   GPIO_PIN(GPIOE, 12) // PC.11
+  #define LCD_NCS_GPIO                  GPIO_PIN(GPIOE, 14) // PA.15
 #if defined(RADIO_FAMILY_T20) || defined(RADIO_BUMBLEBEE)
-  #define LCD_RST_GPIO                  GPIO_PIN(GPIOA, 14) // PA.14
+  #define LCD_RST_GPIO                  GPIO_PIN(GPIOE, 11) // PA.14
 #else
-  #define LCD_RST_GPIO                  GPIO_PIN(GPIOD, 7) // PD.12
+  #define LCD_RST_GPIO                  GPIO_PIN(GPIOD, 11) // PD.12
 #endif
   #define LCD_DMA                       DMA1
   #define LCD_DMA_Stream                DMA1_Stream7
