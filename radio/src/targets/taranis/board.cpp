@@ -139,6 +139,11 @@ void boardInit()
   board_set_bor_level();
 #endif
 
+#if defined(MANUFACTURER_GN) && defined(STM32F407xx)
+  void board_set_bor_level();
+  board_set_bor_level();
+#endif
+
   board_trainer_init();
 
   // Sets 'hardwareOption.pcbrev' as well
@@ -307,6 +312,10 @@ void boardOff()
 #endif
 
 #if defined(MANUFACTURER_RADIOMASTER) && defined(STM32F407xx)
+  lcdInit(); 
+#endif
+
+#if defined(MANUFACTURER_GN) && defined(STM32F407xx)
   lcdInit(); 
 #endif
 
