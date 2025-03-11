@@ -1725,6 +1725,9 @@
 #if !defined(RADIO_POCKET)
   #define ADC_GPIO_PIN_POT2             LL_GPIO_PIN_6  // PA.06
 #endif
+#if !defined(GN_HAZEL)
+  #define ADC_GPIO_PIN_POT2             LL_GPIO_PIN_6  // PA.06
+#endif
   #define ADC_GPIO_PIN_BATT             LL_GPIO_PIN_0  // PC.00
 #if defined(RADIO_BOXER) || defined(RADIO_V14) || defined(RADIO_V12)
   #define HARDWARE_POT3                 // 6 POS
@@ -1806,6 +1809,8 @@
   #define ADC_DIRECTION {-1, 1, 1, -1, -1, 1, 1, 1}
 #elif defined(RADIO_POCKET)
   #define ADC_DIRECTION {-1, 1, 1, -1, -1}
+#elif defined(GN_HAZEL)
+  #define ADC_DIRECTION {-1, 1, 1, -1, -1}  
 #elif defined(RADIO_TPRO) || defined(RADIO_TPROV2) || defined(RADIO_TPROS)
   #define ADC_DIRECTION {1,-1,1,-1,  1,1,  1,  1}
 #elif defined(RADIO_T14)
@@ -2829,7 +2834,7 @@
   #elif defined(PCBX9LITES)
     #define BT_EN_GPIO                  GPIO_PIN(GPIOD, 14) // PD.14
   #elif defined(MANUFACTURER_RADIOMASTER)
-    #if defined(RADIO_POCKET) || defined(RADIO_GX12)
+    #if defined(RADIO_POCKET) || defined(RADIO_GX12) || || defined(GN_HAZEL)
       #define BT_EN_GPIO                GPIO_PIN(GPIOA, 6) // PA.06
     #endif
   #else
