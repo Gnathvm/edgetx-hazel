@@ -311,7 +311,7 @@ int OpenTxFirmware::getCapability(::Capability capability)
       return IS_FAMILY_HORUS_OR_T16(board) || IS_RADIOMASTER_ZORRO(board) ||
              IS_JUMPER_TPRO(board) || IS_RADIOMASTER_TX12_MK2(board) ||
              IS_RADIOMASTER_BOXER(board) || IS_RADIOMASTER_POCKET(board) ||
-             IS_RADIOMASTER_MT12(board);
+             IS_RADIOMASTER_MT12(board) || IS_GN_HAZEL(board);
     case HasBluetooth:
       return (IS_FAMILY_HORUS_OR_T16(board) || IS_TARANIS_X7(board) || IS_TARANIS_XLITE(board)|| IS_TARANIS_X9E(board) ||
               IS_TARANIS_X9DP_2019(board) || IS_FLYSKY_NV14(board) || IS_FLYSKY_EL18(board) || IS_FAMILY_PL18(board)) ? true : false;
@@ -330,7 +330,7 @@ int OpenTxFirmware::getCapability(::Capability capability)
               IS_JUMPER_T15(board) || IS_JUMPER_T18(board) || IS_JUMPER_T20(board) || IS_JUMPER_TPRO(board) ||
               IS_RADIOMASTER_BOXER(board) || IS_RADIOMASTER_GX12(board) || IS_RADIOMASTER_MT12(board) ||
               IS_RADIOMASTER_POCKET(board) || IS_RADIOMASTER_TX12(board) || IS_RADIOMASTER_TX12_MK2(board) ||
-              IS_RADIOMASTER_TX16S(board) || IS_RADIOMASTER_ZORRO(board));
+              IS_RADIOMASTER_TX16S(board) || IS_RADIOMASTER_ZORRO(board) || IS_GN_HAZEL(board));
     case HasSoftwareSerialPower:
       return IS_RADIOMASTER_TX16S(board);
     case HasIntModuleMulti:
@@ -339,6 +339,7 @@ int OpenTxFirmware::getCapability(::Capability capability)
               (IS_RADIOMASTER_ZORRO(board) && !id.contains("internalelrs")) ||
               (IS_RADIOMASTER_BOXER(board) && !id.contains("internalelrs")) ||
               (IS_RADIOMASTER_POCKET(board) && !id.contains("internalelrs")) ||
+              (IS_GN_HAZEL(board) && !id.contains("internalelrs")) ||
               (IS_RADIOMASTER_MT12(board) && !id.contains("internalelrs"));
     case HasIntModuleCRSF:
       return id.contains("internalcrsf");
@@ -346,7 +347,7 @@ int OpenTxFirmware::getCapability(::Capability capability)
       return id.contains("internalelrs") || IS_RADIOMASTER_TX12_MK2(board) ||
              IS_IFLIGHT_COMMANDO8(board) || IS_RADIOMASTER_BOXER(board) ||
              IS_RADIOMASTER_POCKET(board) || IS_JUMPER_T20(board) ||
-             IS_RADIOMASTER_MT12(board);
+             IS_GN_HAZEL(board) || IS_RADIOMASTER_MT12(board);
     case HasIntModuleFlySky:
       return  id.contains("afhds2a") || id.contains("afhds3") ||
               IS_FLYSKY_NV14(board) || IS_FLYSKY_EL18(board);
@@ -738,6 +739,16 @@ void registerOpenTxFirmwares()
 
   /* Radiomaster Pocket board */
   firmware = new OpenTxFirmware(FIRMWAREID("pocket"), QCoreApplication::translate("Firmware", "Radiomaster Pocket"), Board::BOARD_RADIOMASTER_POCKET);
+  addOpenTxCommonOptions(firmware);
+  firmware->addOption("noheli", Firmware::tr("Disable HELI menu and cyclic mix support"));
+  firmware->addOption("nogvars", Firmware::tr("Disable Global variables"));
+  firmware->addOption("lua", Firmware::tr("Enable Lua custom scripts screen"));
+  addOpenTxFontOptions(firmware);
+  registerOpenTxFirmware(firmware);
+  addOpenTxRfOptions(firmware, FLEX + AFHDS2A + AFHDS3);
+  
+  /* GN Hazel board */
+  firmware = new OpenTxFirmware(FIRMWAREID("hazel"), QCoreApplication::translate("Firmware", "GN HAZEL"), Board::BOARD_GN_HAZEL);
   addOpenTxCommonOptions(firmware);
   firmware->addOption("noheli", Firmware::tr("Disable HELI menu and cyclic mix support"));
   firmware->addOption("nogvars", Firmware::tr("Disable Global variables"));
