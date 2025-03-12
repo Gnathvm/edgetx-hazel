@@ -38,6 +38,9 @@ get_target_build_options() {
         pocket)
             BUILD_OPTIONS+="-DPCB=X7 -DPCBREV=POCKET"
             ;;
+        hazel)
+            BUILD_OPTIONS+="-DPCB=X7 -DPCBREV=HAZEL"
+            ;;    
         mt12)
             BUILD_OPTIONS+="-DPCB=X7 -DPCBREV=MT12"
             ;;

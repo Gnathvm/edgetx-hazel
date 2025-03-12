@@ -13,7 +13,7 @@ bool boardBLStartCondition()
   return result;
 }
 
-#elif (defined(RADIO_T8) || defined(RADIO_COMMANDO8)) && !defined(RADIOMASTER_RELEASE)
+#elif (defined(RADIO_T8) || defined(RADIO_COMMANDO8)) && !defined(RADIOMASTER_RELEASE) && !defined(GN_RELEASE)
 
 bool boardBLStartCondition()
 {
