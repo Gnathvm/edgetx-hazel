@@ -2743,7 +2743,7 @@
   #define AUDIO_MUTE_GPIO               GPIO_PIN(GPIOB, 1)
   #define AUDIO_MUTE_DELAY              500  // ms
   #define INVERTED_MUTE_PIN
-#elif defined(MANUFACTURER_RADIOMASTER) || defined(MANUFACTURER_JUMPER) || defined(RADIO_LR3PRO)
+#elif defined(MANUFACTURER_RADIOMASTER) || defined(MANUFACTURER_JUMPER) || defined(RADIO_LR3PRO) || defined(MANUFACTURER_GN)
   #define AUDIO_MUTE_GPIO               GPIO_PIN(GPIOE, 12)
   #define AUDIO_MUTE_DELAY              500  // ms
   #if defined(MANUFACTURER_JUMPER) || defined(RADIO_LR3PRO)
@@ -2833,7 +2833,7 @@
     #define BT_EN_GPIO                  GPIO_PIN(GPIOE, 15) // PE.15
   #elif defined(PCBX9LITES)
     #define BT_EN_GPIO                  GPIO_PIN(GPIOD, 14) // PD.14
-  #elif defined(MANUFACTURER_RADIOMASTER)
+  #elif defined(MANUFACTURER_RADIOMASTER) || defined(MANUFACTURER_GN)
     #if defined(RADIO_POCKET) || defined(RADIO_GX12) || defined(GN_HAZEL)
       #define BT_EN_GPIO                GPIO_PIN(GPIOA, 6) // PA.06
     #endif
