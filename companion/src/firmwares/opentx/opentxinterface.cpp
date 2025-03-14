@@ -747,16 +747,6 @@ void registerOpenTxFirmwares()
   registerOpenTxFirmware(firmware);
   addOpenTxRfOptions(firmware, FLEX + AFHDS2A + AFHDS3);
   
-  /* GN Hazel board */
-  firmware = new OpenTxFirmware(FIRMWAREID("hazel"), QCoreApplication::translate("Firmware", "GN HAZEL"), Board::BOARD_GN_HAZEL);
-  addOpenTxCommonOptions(firmware);
-  firmware->addOption("noheli", Firmware::tr("Disable HELI menu and cyclic mix support"));
-  firmware->addOption("nogvars", Firmware::tr("Disable Global variables"));
-  firmware->addOption("lua", Firmware::tr("Enable Lua custom scripts screen"));
-  addOpenTxFontOptions(firmware);
-  registerOpenTxFirmware(firmware);
-  addOpenTxRfOptions(firmware, FLEX + AFHDS2A + AFHDS3);
-
   /* Radiomaster MT12 board */
   firmware = new OpenTxFirmware(FIRMWAREID("mt12"), QCoreApplication::translate("Firmware", "Radiomaster MT12"), Board::BOARD_RADIOMASTER_MT12);
   addOpenTxCommonOptions(firmware);
@@ -826,6 +816,16 @@ void registerOpenTxFirmwares()
   Firmware::sortRegisteredFirmwares();
   Firmware::setDefaultVariant(Firmware::getFirmwareForFlavour("tx16s"));
   Firmware::setCurrentVariant(Firmware::getDefaultVariant());
+  
+  /* GN Hazel board */
+  firmware = new OpenTxFirmware(FIRMWAREID("hazel"), QCoreApplication::translate("Firmware", "GN HAZEL"), BOARD_GN_HAZEL);
+  addOpenTxCommonOptions(firmware);
+  firmware->addOption("noheli", Firmware::tr("Disable HELI menu and cyclic mix support"));
+  firmware->addOption("nogvars", Firmware::tr("Disable Global variables"));
+  firmware->addOption("lua", Firmware::tr("Enable Lua custom scripts screen"));
+  addOpenTxFontOptions(firmware);
+  registerOpenTxFirmware(firmware);
+  addOpenTxRfOptions(firmware, FLEX + AFHDS2A + AFHDS3);
 }
 
 void unregisterOpenTxFirmwares()
