@@ -101,12 +101,12 @@
   #define USB_NAME                     "HelloRadioSky V14"
   #define USB_MANUFACTURER             'H', 'R', 'S', 'k', 'y', ' ', ' ', ' '  /* 8 bytes */
   #define USB_PRODUCT                  'V', '1', '4', ' ', ' ', ' ', ' ', ' '  /* 8 Bytes */
-#else
-  #define USB_NAME                     "FrSky Taranis"
-  #define USB_MANUFACTURER             'F', 'r', 'S', 'k', 'y', ' ', ' ', ' '  /* 8 bytes */
-  #define USB_PRODUCT                  'T', 'a', 'r', 'a', 'n', 'i', 's', ' '  /* 8 Bytes */
 #elif defined(GN_HAZEL)
   #define USB_NAME                     "GN Hazel"
   #define USB_MANUFACTURER             'G', 'N', '_', 'T', 'X', ' ', ' ', ' '  /* 8 bytes */
-  #define USB_PRODUCT                  'H', 'A', 'Z', 'E', 'L', ' ', ' ', ' '  /* 8 Bytes */  
+  #define USB_PRODUCT                  'H', 'A', 'Z', 'E', 'L', ' ', ' ', ' '  /* 8 Bytes */   
+#else
+  #define USB_NAME                     "FrSky Taranis"
+  #define USB_MANUFACTURER             'F', 'r', 'S', 'k', 'y', ' ', ' ', ' '  /* 8 bytes */
+  #define USB_PRODUCT                  'T', 'a', 'r', 'a', 'n', 'i', 's', ' '  /* 8 Bytes */ 
 #endif
