@@ -640,6 +640,9 @@
   #define SWITCHES_GPIO_PIN_A_H         LL_GPIO_PIN_1  // PE.01
   #define SWITCHES_GPIO_REG_A_L         GPIOE
   #define SWITCHES_GPIO_PIN_A_L         LL_GPIO_PIN_0  // PE.00
+#elif defined(GN_HAZEL)
+  #define SWITCHES_GPIO_REG_A           GPIOC
+  #define SWITCHES_GPIO_PIN_A           LL_GPIO_PIN_13  // PC.13  
 #elif defined(RADIO_TX12) || defined(RADIO_TX12MK2) || defined(RADIO_BOXER) || defined(RADIO_ZORRO) || defined(RADIO_POCKET)
   #define SWITCHES_GPIO_REG_A           GPIOC
   #define SWITCHES_GPIO_PIN_A           LL_GPIO_PIN_13  // PC.13
