@@ -818,7 +818,7 @@ void registerOpenTxFirmwares()
   Firmware::setCurrentVariant(Firmware::getDefaultVariant());
   
   /* GN Hazel board */
-  firmware = new OpenTxFirmware(FIRMWAREID("hazel"), QCoreApplication::translate("Firmware", "GN HAZEL"), BOARD_GN_HAZEL);
+  firmware = new OpenTxFirmware(FIRMWAREID("hazel"), QCoreApplication::translate("Firmware", "GN HAZEL"), Board::BOARD_GN_HAZEL);
   addOpenTxCommonOptions(firmware);
   firmware->addOption("noheli", Firmware::tr("Disable HELI menu and cyclic mix support"));
   firmware->addOption("nogvars", Firmware::tr("Disable Global variables"));
