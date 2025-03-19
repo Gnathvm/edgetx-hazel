@@ -2707,10 +2707,10 @@
 #define SD_LONG_BUSY_WAIT               (true)
 #endif
 
-#define SD_GPIO_PIN_CS                  GPIO_PIN(GPIOB, 12) // PB.12
-#define SD_GPIO_PIN_SCK                 GPIO_PIN(GPIOB, 13) // PB.13
-#define SD_GPIO_PIN_MISO                GPIO_PIN(GPIOB, 14) // PB.14
-#define SD_GPIO_PIN_MOSI                GPIO_PIN(GPIOB, 15) // PB.15
+#define SD_GPIO_PIN_CS                  GPIO_PIN(GPIOC, 11) // PB.12
+#define SD_GPIO_PIN_SCK                 GPIO_PIN(GPIOC, 12) // PB.13
+#define SD_GPIO_PIN_MISO                GPIO_PIN(GPIOC, 8) // PB.14
+#define SD_GPIO_PIN_MOSI                GPIO_PIN(GPIOD, 2) // PB.15
 
 #define SD_SPI                          SPI2
 #define SD_SPI_DMA                      DMA1
