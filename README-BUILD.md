@@ -5,6 +5,8 @@ We will next fetch the EdgeTX source files from the GitHub main development bran
 
     git clone --recursive -b main https://github.com/Gnathvm/edgetx-hazel.git
 
+Create Build Directory
+
     mkdir build-output && cd build-output
 
 To build EdgeTX, we need to minimally specify the radio target, but can further select or de-select a number of build-time options. The following command will create a text-file list of all options for you to look at and saves it in current user home directory:
