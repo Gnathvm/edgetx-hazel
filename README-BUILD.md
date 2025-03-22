@@ -8,7 +8,7 @@ cd ~/edgetx
 
 We will next fetch the EdgeTX source files from the GitHub main development branch into local subfolder /edgetx/edgetx_main in current user home, prepare the environment and build output directory. Issue, in the same terminal window as above, the following commands, one at a time:
 
-git clone --recursive -b main https://github.com/EdgeTX/edgetx.git edgetx_main
+git clone --recursive -b main https://github.com/Gnathvm/edgetx-hazel.git main
 
 cd edgetx_main && mkdir build-output && cd build-output
 
