@@ -7,16 +7,9 @@ from builtins import NotADirectoryError
 import shutil
 import tempfile
 
-
 boards = {
-    
-    "HAZEL": {
-        "PCB": "HAZEL",
-        "PCBREV": "HAZEL",
-        "DEFAULT_MODE": "2",
-    }
+    "NV14": { "PCB": "HAZEL", "PCBREV": "HAZEL" },
 }
-
 translations = [
     "EN",
 ]
