@@ -970,6 +970,31 @@ LEGACY_NAMES = [
             },
         },
     },
+    {
+        "targets": {"hazel"},
+        "inputs": {
+            "LH": {
+                "yaml": "Rud",
+                "lua": "rud",
+                "description": "Rudder"
+            },
+            "LV": {
+                "yaml": "Ele",
+                "lua": "ele",
+                "description": "Elevator"
+            },
+            "RV": {
+                "yaml": "Thr",
+                "lua": "thr",
+                "description": "Throttle"
+            },
+            "RH": {
+                "yaml": "Ail",
+                "lua": "ail",
+                "description": "Aileron"
+            },
+        }
+    },
 ]
 
 
