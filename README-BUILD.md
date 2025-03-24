@@ -1,3 +1,29 @@
+Setting up the build environment for EdgeTX
+-------------------------------------------
+For Ubuntu 20.04
+----------------
+    wget https://raw.githubusercontent.com/Gnathvm/edgetx-hazel/main/tools/setup_buildenv_ubuntu20.04.sh
+
+Make Executable
+
+    chmod a+x setup_buildenv_ubuntu20.04.sh
+
+Execute Install Script 
+
+    ./setup_buildenv_ubuntu20.04.sh    
+    
+For Ubuntu 22.04
+----------------
+    wget https://raw.githubusercontent.com/Gnathvm/edgetx-hazel/main/tools/setup_buildenv_ubuntu22.04.sh
+    
+Make Executable
+
+    chmod a+x setup_buildenv_ubuntu22.04.sh
+    
+Execute Install Script
+    
+    ./setup_buildenv_ubuntu22.04.sh
+
 Building EdgeTX firmware for the radio
 --------------------------------------
 We will next fetch the EdgeTX source files from the GitHub main development branch into local subfolder /edgetx/edgetx_main in current user home, prepare the environment and build output directory. Issue, in the same terminal window as above, the following commands, one at a time:
