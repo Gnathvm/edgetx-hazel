@@ -1,7 +1,7 @@
 include(CMakeForceCompiler)
 include(Bitmaps)
 
-set(PCB_TYPES X9LITE X9LITES X7 XLITE XLITES X9D X9D+ X9E X10 X12S NV14 PL18)
+set(PCB_TYPES X9LITE X9LITES HAZEL X7 XLITE XLITES X9D X9D+ X9E X10 X12S NV14 PL18)
 set(RADIO_LANGUAGES CN CZ DA DE EN ES FI FR HE HU IT JP NL PL PT RU SE SK TW UA)
 set(TTS_LANGUAGES CN CZ DA DE EN ES FR HE HU IT JP NL PL PT RU SE SK UA)
 
@@ -87,6 +87,8 @@ if(PCB STREQUAL X12S OR PCB STREQUAL X10)
   include(targets/horus/CMakeLists.txt)
 elseif(PCB STREQUAL NV14)
   include(targets/nv14/CMakeLists.txt)
+elseif(PCB STREQUAL hazel)
+  include(targets/hazel/CMakeLists.txt)  
 elseif(PCB STREQUAL PL18)
   include(targets/pl18/CMakeLists.txt)
 elseif(PCB STREQUAL STM32H7S78_DK)

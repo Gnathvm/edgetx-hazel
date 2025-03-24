@@ -153,7 +153,7 @@ get_target_build_options() {
             BUILD_OPTIONS+="-DPCB=PL18 -DPCBREV=NB4P"
             ;;
         hazel)
-            BUILD_OPTIONS+="-DPCB=G7 -DPCBREV=HAZEL"
+            BUILD_OPTIONS+="-DPCB=HAZEL"
             ;;    
         *)
             echo "Unknown target: $target_name"
