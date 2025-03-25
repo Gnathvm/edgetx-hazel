@@ -640,6 +640,9 @@
   #define SWITCHES_GPIO_PIN_A_H         LL_GPIO_PIN_1  // PE.01
   #define SWITCHES_GPIO_REG_A_L         GPIOE
   #define SWITCHES_GPIO_PIN_A_L         LL_GPIO_PIN_0  // PE.00
+#elif defined(GN_HAZEL)
+  #define SWITCHES_GPIO_REG_A           GPIOC
+  #define SWITCHES_GPIO_PIN_A           LL_GPIO_PIN_13  // PC.13  
 #elif defined(RADIO_TX12) || defined(RADIO_TX12MK2) || defined(RADIO_BOXER) || defined(RADIO_ZORRO) || defined(RADIO_POCKET)
   #define SWITCHES_GPIO_REG_A           GPIOC
   #define SWITCHES_GPIO_PIN_A           LL_GPIO_PIN_13  // PC.13
@@ -2582,14 +2585,14 @@
   #define LCD_SPI                       SPI3
   #define LCD_GPIO_AF                   GPIO_AF6
 #elif defined(PCBX9DP) || defined(PCBX7)
-  #define LCD_MOSI_GPIO                 GPIO_PIN(GPIOC, 12) // PC.12
-  #define LCD_CLK_GPIO                  GPIO_PIN(GPIOC, 10) // PC.10
-  #define LCD_A0_GPIO                   GPIO_PIN(GPIOC, 11) // PC.11
-  #define LCD_NCS_GPIO                  GPIO_PIN(GPIOA, 15) // PA.15
+  #define LCD_MOSI_GPIO                 GPIO_PIN(GPIOC, 3) // PC.12
+  #define LCD_CLK_GPIO                  GPIO_PIN(GPIOB, 10) // PC.10
+  #define LCD_A0_GPIO                   GPIO_PIN(GPIOE, 12) // PC.11 (DC)
+  #define LCD_NCS_GPIO                  GPIO_PIN(GPIOE, 14) // PA.15
 #if defined(RADIO_FAMILY_T20) || defined(RADIO_BUMBLEBEE)
   #define LCD_RST_GPIO                  GPIO_PIN(GPIOA, 14) // PA.14
 #else
-  #define LCD_RST_GPIO                  GPIO_PIN(GPIOD, 12) // PD.12
+  #define LCD_RST_GPIO                  GPIO_PIN(GPIOE, 11) // PD.12
 #endif
   #define LCD_DMA                       DMA1
   #define LCD_DMA_Stream                DMA1_Stream7
@@ -2704,10 +2707,10 @@
 #define SD_LONG_BUSY_WAIT               (true)
 #endif
 
-#define SD_GPIO_PIN_CS                  GPIO_PIN(GPIOB, 12) // PB.12
-#define SD_GPIO_PIN_SCK                 GPIO_PIN(GPIOB, 13) // PB.13
-#define SD_GPIO_PIN_MISO                GPIO_PIN(GPIOB, 14) // PB.14
-#define SD_GPIO_PIN_MOSI                GPIO_PIN(GPIOB, 15) // PB.15
+#define SD_GPIO_PIN_CS                  GPIO_PIN(GPIOC, 11) // PB.12
+#define SD_GPIO_PIN_SCK                 GPIO_PIN(GPIOC, 12) // PB.13
+#define SD_GPIO_PIN_MISO                GPIO_PIN(GPIOC, 8) // PB.14
+#define SD_GPIO_PIN_MOSI                GPIO_PIN(GPIOD, 2) // PB.15
 
 #define SD_SPI                          SPI2
 #define SD_SPI_DMA                      DMA1

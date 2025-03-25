@@ -231,6 +231,9 @@ POT_CONFIG = {
     "pocket": {
         "P1": {"default": "POT"}
     },
+    "hazel": {
+        "P1": {"default": "POT"}
+    },
 }
 
 
