@@ -37,7 +37,7 @@ get_target_build_options() {
             ;;
         pocket)
             BUILD_OPTIONS+="-DPCB=X7 -DPCBREV=POCKET"
-            ;;
+            ;;   
         mt12)
             BUILD_OPTIONS+="-DPCB=X7 -DPCBREV=MT12"
             ;;
@@ -152,6 +152,9 @@ get_target_build_options() {
         nb4p)
             BUILD_OPTIONS+="-DPCB=PL18 -DPCBREV=NB4P"
             ;;
+        hazel)
+            BUILD_OPTIONS+="-DPCB=X7 -DPCBREV=HAZEL"
+            ;;    
         *)
             echo "Unknown target: $target_name"
             return 1

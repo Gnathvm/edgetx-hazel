@@ -158,7 +158,7 @@ def main():
         cmake_options["PCB"] = "X7"
         cmake_options["PCBREV"] = "POCKET"
         firmware_options = options_radiomaster_pocket
-        maxsize = 65536 * 8
+        maxsize = 65536 * 8   
     elif board_name == "mt12":
         cmake_options["PCB"] = "X7"
         cmake_options["PCBREV"] = "MT12"
@@ -199,6 +199,11 @@ def main():
         cmake_options["PCBREV"] = "F16"
         firmware_options = options_fatfish_f16
         maxsize = 2 * 1024 * 1024
+    elif board_name == "hazel":
+        cmake_options["PCB"] = "X7"
+        cmake_options["PCBREV"] = "HAZEL"
+        firmware_options = options_gn_hazel
+        maxsize = 65536 * 8     
     elif board_name == "v16":
         cmake_options["PCB"] = "X10"
         cmake_options["PCBREV"] = "V16"

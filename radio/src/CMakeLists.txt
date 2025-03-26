@@ -356,6 +356,10 @@ if(RADIOMASTER_RTF_RELEASE)
   add_definitions(-DRADIOMASTER_RTF_RELEASE)
 endif()
 
+if(GN_RELEASE)
+  add_definitions(-DGN_RELEASE)
+endif()
+
 if(TBS_RELEASE)
   add_definitions(-DTBS_RELEASE)
 endif()

@@ -1,0 +1,5 @@
+cd build-output
+cmake -LAH ../ > ~/edgetx-cmake-options.txt
+cmake -DPCB=X7 -DPCBREV=HAZEL -DDEFAULT_MODE=2 -DGVARS=YES -DPPM_UNIT=US -DLUA_MIXER=YES -DCMAKE_BUILD_TYPE=Debug ../
+make configure
+make -j`nproc` firmware
